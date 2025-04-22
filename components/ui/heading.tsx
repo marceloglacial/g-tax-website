@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { Animation } from "@/components/animation/Animation";
 
 interface HeadingProps extends PropsWithChildren {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
@@ -34,11 +35,20 @@ const Heading = ({
 
   return (
     <div className="flex flex-col items-center gap-4 text-center max-w-3xl mx-auto">
-      {badge && <Badge variant="outline">{badge}</Badge>}
+      {badge && (
+        <Animation>
+          <Badge variant="outline">{badge}</Badge>
+        </Animation>
+      )}
       <div className={cn(defaultClassNames[level], className)} {...props}>
-        {children}
+        <Animation>{children}</Animation>
       </div>
-      {description && <p className="text-muted-foreground">{description}</p>}
+
+      {description && (
+        <Animation>
+          <p className="text-muted-foreground">{description}</p>
+        </Animation>
+      )}
     </div>
   );
 };
