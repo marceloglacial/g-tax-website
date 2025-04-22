@@ -61,16 +61,15 @@ const Services = ({
   },
 }: ServicesProps) => {
   return (
-    <section className="py-32 grid gap-16">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center gap-4 text-center">
-          <Badge variant="outline">{badge}</Badge>
-          <Heading level={1} className="max-w-2xl text-center">
-            {heading}
-          </Heading>
-          <p className="text-muted-foreground">{description}</p>
-        </div>
-      </div>
+    <section id="servicos" className="py-32 grid gap-16">
+      <Heading
+        level={1}
+        className="max-w-2xl text-center"
+        badge={badge}
+        description={description}
+      >
+        {heading}
+      </Heading>
       <div className="relative flex justify-center">
         <div className="border-muted2 relative flex w-full flex-col border md:w-1/2 lg:w-full">
           <div className="relative flex flex-col lg:flex-row">
