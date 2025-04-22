@@ -41,11 +41,11 @@ const Heading = ({
         </Animation>
       )}
       <div className={cn(defaultClassNames[level], className)} {...props}>
-        <Animation>{children}</Animation>
+        <Animation delay={0.25}>{children}</Animation>
       </div>
 
       {description && (
-        <Animation>
+        <Animation delay={0.5}>
           <p className="text-muted-foreground">{description}</p>
         </Animation>
       )}
