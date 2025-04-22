@@ -1,11 +1,14 @@
 import React, { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 
 interface HeadingProps extends PropsWithChildren {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   as?: 1 | 2 | 3 | 4 | 5 | 6;
   children: React.ReactNode;
   className?: string;
+  badge?: string;
+  description?: string;
 }
 
 const Heading = ({
@@ -13,6 +16,8 @@ const Heading = ({
   as,
   children,
   className,
+  badge,
+  description,
   ...props
 }: HeadingProps) => {
   const HeadingTag = `h${as || level}`;
@@ -28,8 +33,12 @@ const Heading = ({
   };
 
   return (
-    <div className={cn(defaultClassNames[level], className)} {...props}>
-      {children}
+    <div className="flex flex-col items-center gap-4 text-center max-w-3xl mx-auto">
+      {badge && <Badge variant="outline">{badge}</Badge>}
+      <div className={cn(defaultClassNames[level], className)} {...props}>
+        {children}
+      </div>
+      {description && <p className="text-muted-foreground">{description}</p>}
     </div>
   );
 };

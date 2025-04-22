@@ -1,123 +1,82 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import Heading from "@/components/ui/heading";
-import {
-  ArrowRight,
-  Award,
-  Building2,
-  HeartHandshake,
-  Leaf,
-  Lightbulb,
-  Trophy,
-} from "lucide-react";
-import React from "react";
+
+interface Feature {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+}
 
 interface DocumentsProps {
-  badge?: string;
   heading?: string;
+  features?: Feature[];
+  badge?: string;
   description?: string;
-  items?: {
-    icon: React.ReactNode;
-    title: string;
-    category: string;
-    description: string;
-    link: string;
-  }[];
 }
 
 const Documents = ({
-  badge = "Nossos Serviços",
-  heading = "A Collection of Components Built With Shadcn & Tailwind",
-  description = "Sabemos o quanto é importante garantir que suas obrigações fiscais estejam em dia, e é por isso que estamos aqui para simplificar esse processo para você. Se você é residente no Canadá e precisa de ajuda para lidar com questões fiscais, nossa equipe está pronta para oferecer o suporte necessário, com atendimento dedicado e eficiente.",
-  items = [
+  heading = "A better way to build websites",
+  badge = "Our documents",
+  description = "Desciption",
+  features = [
     {
-      icon: <Trophy />,
-      title: "Industry Recognition",
-      category: "Achievement",
-      description: "Outstanding Performance Award.",
-      link: "#",
+      id: "feature-1",
+      title: "Built for artists and designers",
+      subtitle: "FOR DESIGNERS",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima doloribus illum, labore quis facilis molestias!",
+      image: "https://shadcnblocks.com/images/block/placeholder-1.svg",
     },
     {
-      icon: <Award />,
-      title: "Excellence Award",
-      category: "Recognition",
-      description: "Best in Category Winner.",
-      link: "#",
-    },
-    {
-      icon: <Lightbulb />,
-      title: "Innovation Prize",
-      category: "Technology",
-      description: "Breakthrough Solution of the Year.",
-      link: "#",
-    },
-    {
-      icon: <HeartHandshake />,
-      title: "Customer Success",
-      category: "Service",
-      description: "Top-Rated Solution Provider.",
-      link: "#",
-    },
-    {
-      icon: <Building2 />,
-      title: "Global Leadership",
-      category: "Management",
-      description: "Executive Team of the Year.",
-      link: "#",
-    },
-    {
-      icon: <Leaf />,
-      title: "Sustainability Impact",
-      category: "Environmental",
-      description: "Green Initiative Excellence.",
-      link: "#",
+      id: "feature-2",
+      title: "Built for coders and developers",
+      subtitle: "FOR DEVELOPERS",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima doloribus illum, labore quis facilis molestias!",
+      image: "https://shadcnblocks.com/images/block/placeholder-4.svg",
     },
   ],
 }: DocumentsProps) => {
   return (
-    <section className="py-32 grid gap-16">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center gap-4 text-center">
-          <Badge variant="outline">{badge}</Badge>
-          <Heading level={1} className="max-w-2xl text-center">
-            {heading}
-          </Heading>
-          <p className="text-muted-foreground">{description}</p>
-        </div>
-      </div>
-      <div>
-        <Separator />
-        {items.map((item, index) => (
-          <React.Fragment key={index}>
-            <div className="grid items-center gap-4 px-4 py-5 md:grid-cols-4">
-              <div className="order-2 flex items-center gap-2 md:order-none">
-                <span className="flex h-14 w-16 shrink-0 items-center justify-center rounded-md bg-muted">
-                  {item.icon}
-                </span>
-                <div className="flex flex-col gap-1">
-                  <Heading level={3}>{item.title}</Heading>
-                  <p className="text-sm text-muted-foreground">
-                    {item.category}
+    <section id="documentos" className="py-32">
+      <Heading
+        level={1}
+        className="max-w-2xl text-center"
+        badge={badge}
+        description={description}
+      >
+        {heading}
+      </Heading>
+      <div className="container max-w-7xl">
+        <div className="mt-20 grid gap-9 lg:grid-cols-2">
+          {features.map((feature) => (
+            <div
+              key={feature.id}
+              className="flex flex-col justify-between rounded-lg bg-accent"
+            >
+              <div className="flex justify-between gap-10 border-b">
+                <div className="flex flex-col justify-between gap-14 py-6 pl-4 md:py-10 md:pl-8 lg:justify-normal">
+                  <p className="text-xs text-muted-foreground">
+                    {feature.subtitle}
                   </p>
+                  <h3 className="text-2xl md:text-4xl">{feature.title}</h3>
+                </div>
+                <div className="md:1/3 w-2/5 shrink-0 rounded-r-lg border-l">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
               </div>
-              <p className="order-1 text-2xl font-semibold md:order-none md:col-span-2">
-                {item.description}
-              </p>
-              <Button variant="outline" asChild>
-                <a
-                  className="order-3 ml-auto w-fit gap-2 md:order-none"
-                  href={item.link}
-                >
-                  <span>View project</span>
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </Button>
+              <div className="p-4 text-muted-foreground md:p-8">
+                {feature.description}
+              </div>
             </div>
-            <Separator />
-          </React.Fragment>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
