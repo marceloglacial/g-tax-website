@@ -25,7 +25,7 @@ const Hero = ({
   subheading = " para brasileiros no Canadá.",
   description = "Nossa missão é oferecer soluções completas e personalizadas para o preenchimento e a entrega de sua declaração de imposto de renda, com foco na segurança, agilidade e total conformidade com as normas fiscais canadenses.",
   image = {
-    src: "app.png",
+    src: "/app.png",
     alt: "Placeholder",
   },
 }: HeroProps) => {
@@ -38,7 +38,7 @@ const Hero = ({
         delay={0.7}
         className="absolute top-12 lg:top-0 right-0 lg:w-2/3 -z-10"
       >
-        <img src="hero-bg.png" className="opacity-30 lg:opacity-100" />
+        <img src="/hero-bg.png" className="opacity-30 lg:opacity-100" />
       </Animation>
 
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-24 lg:my-0 lg:flex-row">
