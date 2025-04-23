@@ -36,17 +36,21 @@ const Heading = ({
   return (
     <div className="flex flex-col items-center gap-4 text-center max-w-3xl mx-auto">
       {badge && (
-        <Animation>
+        <Animation className=" h-auto">
           <Badge variant="outline">{badge}</Badge>
         </Animation>
       )}
       <div className={cn(defaultClassNames[level], className)} {...props}>
-        <Animation delay={0.25}>{children}</Animation>
+        <Animation delay={0.25} isHidden>
+          {children}
+        </Animation>
       </div>
 
       {description && (
-        <Animation delay={0.5}>
-          <p className="text-muted-foreground">{description}</p>
+        <Animation className="min-h-fit" delay={0.5} isHidden>
+          <p className="text-muted-foreground lg:text-lg lg:pt-4">
+            {description}
+          </p>
         </Animation>
       )}
     </div>

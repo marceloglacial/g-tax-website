@@ -22,6 +22,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Logo from "../logo/Logo";
 
 interface MenuItem {
   title: string;
@@ -52,12 +53,6 @@ interface Navbar1Props {
 }
 
 const Navbar = ({
-  logo = {
-    url: "#",
-    src: "https://shadcnblocks.com/images/block/logos/shadcnblockscom-icon.svg",
-    alt: "logo",
-    title: "G-Tax",
-  },
   menu = [
     { title: "Serviços", url: "#servicos" },
     {
@@ -81,9 +76,9 @@ const Navbar = ({
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">
             {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
+            <a href="#" className="flex items-center gap-2">
               <span className="text-5xl font-bold tracking-tighter">
-                {logo.title}
+                <Logo />
               </span>
             </a>
           </div>
@@ -100,8 +95,10 @@ const Navbar = ({
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
-              <img src={logo.src} className="max-h-8" alt={logo.alt} />
+            <a href="#" className="flex items-center gap-2">
+              <span className="text-4xl font-bold tracking-tighter">
+                <Logo size="sm" />
+              </span>
             </a>
             <Sheet>
               <SheetTrigger asChild>
@@ -112,8 +109,8 @@ const Navbar = ({
               <SheetContent className="overflow-y-auto">
                 <SheetHeader>
                   <SheetTitle>
-                    <a href={logo.url} className="flex items-center gap-2">
-                      <img src={logo.src} className="max-h-8" alt={logo.alt} />
+                    <a href="#" className="flex items-center gap-2">
+                      <Logo size="sm" />
                     </a>
                   </SheetTitle>
                 </SheetHeader>
@@ -155,7 +152,7 @@ const renderMenuItem = (item: MenuItem) => {
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
-        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground"
+        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-xl font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
       >
         {item.title}
       </NavigationMenuLink>
