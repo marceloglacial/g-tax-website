@@ -20,7 +20,7 @@ const Contact = () => {
         <div className="grid gap-8 lg:gap-0">
           <Animation delay={0.6} className="hidden lg:text-xl">
             Descubra como podemos ajudá-lo a manter sua vida financeira em ordem
-            enquanto você aproveita as oportunidades que o Canadá oferece!
+            enquanto você aproveita as oportunidades que o Canada oferece!
           </Animation>
           <Animation delay={0.7} className="flex flex-col gap-2 xl:text-xl">
             <div className="flex gap-2 items-center">

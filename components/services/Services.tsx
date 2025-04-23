@@ -26,24 +26,24 @@ interface ServicesProps {
 
 const Services = ({
   badge = "Nossos Serviços",
-  description = "Sabemos o quanto é importante garantir que suas obrigações fiscais estejam em dia, e é por isso que estamos aqui para simplificar esse processo para você. Se você é residente no Canadá e precisa de ajuda para lidar com questões fiscais, nossa equipe está pronta para oferecer o suporte necessário, com atendimento dedicado e eficiente.",
+  description = "Sabemos o quanto é importante garantir que suas obrigações fiscais estejam em dia, e é por isso que estamos aqui para simplificar esse processo para você. Se você é residente no Canada e precisa de ajuda para lidar com questões fiscais, nossa equipe está pronta para oferecer o suporte necessário, com atendimento dedicado e eficiente.",
   features = {
     feature1: {
       title: "Imposto de renda pessoa física",
       description:
-        "Assessoria para declaração no Canadá, com precisão e conformidade.",
+        "Assessoria para declaração no Canada, com precisão e conformidade.",
       image: "imposto.png",
     },
     feature2: {
       title: "Abertura de Empresa",
       description:
-        "Suporte completo para abrir sua empresa no Canadá, de forma segura e eficiente.",
+        "Suporte completo para abrir sua empresa no Canada, de forma segura e eficiente.",
       image: "abertura.png",
     },
     feature3: {
       title: "Serviços Contábeis",
       description:
-        "Serviços contábeis confiáveis e precisos para você ou sua empresa no Canadá.",
+        "Serviços contábeis confiáveis e precisos para você ou sua empresa no Canada.",
       image: "servicos.png",
     },
   },
