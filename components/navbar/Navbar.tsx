@@ -70,7 +70,7 @@ const Navbar = ({
   ],
 }: Navbar1Props) => {
   return (
-    <section className="fixed top-0 left-0 w-full bg-background z-50">
+    <section className="fixed top-0 left-0 w-full bg-background z-50 py-2">
       <div className="container max-w-7xl mx-auto py-4 px-8">
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex">

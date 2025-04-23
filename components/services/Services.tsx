@@ -50,7 +50,7 @@ const Services = ({
   },
 }: ServicesProps) => {
   return (
-    <section id="servicos" className="py-32 grid gap-16">
+    <section id="servicos" className="grid gap-16 pt-48">
       <Heading
         level={1}
         className="max-w-2xl text-center"
@@ -65,13 +65,13 @@ const Services = ({
         <div className="grid gap-8">
           <Animation
             delay={0.5}
-            className="bg-foreground rounded-4xl shadow-md p-6 grid sm:grid-cols-2 gap-6"
+            className="bg-foreground rounded-xl lg:rounded-4xl shadow-md p-4 lg:p-6 grid sm:grid-cols-2 gap-6 items-center"
           >
             <div>
-              <h3 className="text-secondary text-3xl font-semibold">
+              <h3 className="text-secondary text-2xl lg:text-3xl font-semibold">
                 {features.feature1.title}
               </h3>
-              <p className="text-muted-foreground mt-4 text-lg">
+              <p className="text-muted-foreground lg:text-lg">
                 {features.feature1.description}
               </p>
             </div>
@@ -79,47 +79,47 @@ const Services = ({
               <img
                 src={features.feature1.image}
                 alt={features.feature1.title}
-                className="rounded-3xl object-cover h-full w-full"
+                className="rounded-xl lg:rounded-3xl object-cover aspect-video lg:aspect-auto h-full w-full"
               />
             </div>
           </Animation>
           <Animation
             delay={0.5}
-            className="bg-foreground rounded-4xl shadow-md p-6 grid sm:grid-cols-2 gap-6"
+            className="bg-foreground rounded-xl lg:rounded-4xl shadow-md p-4 lg:p-6 grid sm:grid-cols-2 gap-6 items-center"
           >
+            <div>
+              <h3 className="text-secondary text-2xl lg:text-3xl font-semibold">
+                {features.feature2.title}
+              </h3>
+              <p className="text-muted-foreground lg:text-lg">
+                {features.feature2.description}
+              </p>
+            </div>
             <div>
               <img
                 src={features.feature2.image}
                 alt={features.feature2.title}
-                className="rounded-3xl object-cover h-full w-full"
+                className="rounded-xl lg:rounded-3xl object-cover aspect-video lg:aspect-auto h-full w-full"
               />
-            </div>
-            <div>
-              <h3 className="text-secondary text-3xl font-semibold">
-                {features.feature2.title}
-              </h3>
-              <p className="text-muted-foreground mt-4 text-lg">
-                {features.feature2.description}
-              </p>
             </div>
           </Animation>
         </div>
         <Animation
           delay={0.7}
-          className="h-full bg-foreground rounded-3xl shadow-md p-6 flex flex-col gap-6"
+          className="h-full bg-foreground rounded-2xl lg:rounded-3xl shadow-md p-4 lg:p-6 flex flex-col-reverse lg:flex-col gap-6"
         >
           <div>
             <img
               src={features.feature3.image}
               alt={features.feature3.title}
-              className=" rounded-3xl object-cover w-full h-[400px]"
+              className="rounded-xl lg:rounded-3xl object-cover aspect-video lg:aspect-auto object-top w-full lg:h-[450px]"
             />
           </div>
-          <div className="flex gap-4">
-            <h3 className="text-secondary text-3xl font-semibold sm:w-1/2">
+          <div className="flex flex-col justify-center h-full">
+            <h3 className="text-secondary text-2xl lg:text-3xl font-semibold sm:w-1/2">
               {features.feature3.title}
             </h3>
-            <p className="text-muted-foreground text-lg sm:w-1/2">
+            <p className="text-muted-foreground lg:text-lg">
               {features.feature3.description}
             </p>
           </div>

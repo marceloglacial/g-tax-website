@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Heading from "@/components/ui/heading";
+import Animation from "@/components/animation/Animation";
 
 interface FaqItem {
   question: string;
@@ -79,8 +80,8 @@ const Faq = ({
   ],
 }: FaqProps) => {
   return (
-    <section id="faq" className="py-32">
-      <div className="container max-w-3xl mx-auto grid gap-16">
+    <section id="faq" className="pt-24 lg:pt-48">
+      <div className="container lg:max-w-3xl lg:mx-auto grid gap-16">
         <Heading
           level={1}
           badge={badge}
@@ -91,18 +92,20 @@ const Faq = ({
         >
           <span className="text-accent">Perguntas</span> Frequentes
         </Heading>
-        <Accordion type="single" collapsible>
-          {items.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="font-semibold hover:no-underline text-2xl py-8 cursor-pointer">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-accent text-lg">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <Animation delay={0.7}>
+          <Accordion type="single" collapsible>
+            {items.map((item, index) => (
+              <AccordionItem value={`item-${index}`} key={index}>
+                <AccordionTrigger className="font-normal hover:no-underline lg:text-2xl lg:py-8 cursor-pointer">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-accent lg:text-lg">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Animation>
       </div>
     </section>
   );

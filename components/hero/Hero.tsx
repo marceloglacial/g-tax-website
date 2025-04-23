@@ -32,12 +32,15 @@ const Hero = ({
   return (
     <section
       id="hero"
-      className="py-20 lg:py-32 lg:h-screen lg:flex lg:items-center"
+      className="pt-24 lg:pt-0 lg:h-screen lg:flex lg:items-center relative"
     >
       <div className="container flex flex-col items-center gap-24 lg:my-0 lg:flex-row">
         <div className="flex flex-col gap-7 lg:w-2/3">
-          <Animation delay={0.7} className="absolute top-0 right-0 w-2/3">
-            <img src="hero-bg.png" />
+          <Animation
+            delay={0.7}
+            className="absolute -bottom-1/3 lg:bottom-auto lg:top-0 lg:-right-1/4 w-full -z-10 hidden lg:flex"
+          >
+            <img src="hero-bg.png" className="sm:opacity-30 lg:opacity-100" />
           </Animation>
           <Animation isHidden>
             <div className="text-5xl font-semibold text-foreground md:text-5xl lg:text-8xl text-left mx-0">

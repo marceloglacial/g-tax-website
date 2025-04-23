@@ -17,8 +17,6 @@ interface DocumentsProps {
   description?: string;
 }
 
-const IconSize: number = 56;
-
 const Documents = ({
   badge = "Documentos",
   description = "Guias e outros documentos essenciais para a sua contabilidade. Mantenha suas obrigações em dia com facilidade e segurança.",
@@ -27,30 +25,30 @@ const Documents = ({
       id: "1",
       title: "Income Tax Organizer",
       url: "#",
-      icon: <FileInput size={IconSize} />,
+      icon: <FileInput className="w-6 h-6 lg:w-10 lg:h-10" />,
     },
     {
       id: "2",
       title: "Self-Employed Guide",
       url: "#",
-      icon: <FileUser size={IconSize} />,
+      icon: <FileUser className="w-6 h-6 lg:w-10 lg:h-10" />,
     },
     {
       id: "3",
       title: "Self Employed (Only Rental Property) Guide",
       url: "#",
-      icon: <FileKey2 size={IconSize} />,
+      icon: <FileKey2 className="w-6 h-6 lg:w-10 lg:h-10" />,
     },
     {
       id: "4",
       title: "T1135 Foreign Income Verification Statement",
       url: "#",
-      icon: <FileOutput size={IconSize} />,
+      icon: <FileOutput className="w-6 h-6 lg:w-10 lg:h-10" />,
     },
   ],
 }: DocumentsProps) => {
   return (
-    <section id="documentos" className="py-20 lg:py-32">
+    <section id="documentos" className="pt-24 lg:pt-48">
       <Heading
         level={1}
         className="max-w-2xl text-center"
@@ -61,7 +59,7 @@ const Documents = ({
         Contábeis
       </Heading>
       <div className="container max-w-7xl">
-        <div className="mt-20 grid gap-9 lg:grid-cols-2">
+        <div className="mt-10 lg:mt-20 grid lg:gap-9 lg:grid-cols-2">
           {documents.map((document, index) => (
             <a href={document.url} key={index} download>
               <Animation
@@ -69,8 +67,8 @@ const Documents = ({
                 className="flex border-b items-center"
               >
                 <div className="text-accent">{document.icon}</div>
-                <div className="flex flex-col justify-between gap-14 py-6 pl-4 md:py-10 md:pl-8 lg:justify-normal">
-                  <h3 className="text-2xl md:text-4xl">{document.title}</h3>
+                <div className="py-4 pl-4 lg:py-10 lg:pl-8">
+                  <h3 className="md:text-4xl">{document.title}</h3>
                 </div>
               </Animation>
             </a>
