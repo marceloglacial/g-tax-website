@@ -14,15 +14,12 @@ interface HeadingProps extends PropsWithChildren {
 
 const Heading = ({
   level = 2,
-  as,
   children,
   className,
   badge,
   description,
   ...props
 }: HeadingProps) => {
-  const HeadingTag = `h${as || level}`;
-
   // Define default class names based on heading level
   const defaultClassNames = {
     1: "max-w-2xl text-3xl font-semibold md:text-4xl lg:text-6xl",
