@@ -1,11 +1,15 @@
 import React, { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import Animation from "@/components/animation/Animation";
 
 interface HeadingProps extends PropsWithChildren {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   as?: 1 | 2 | 3 | 4 | 5 | 6;
   children: React.ReactNode;
   className?: string;
+  badge?: string;
+  description?: string;
 }
 
 const Heading = ({
@@ -13,6 +17,8 @@ const Heading = ({
   as,
   children,
   className,
+  badge,
+  description,
   ...props
 }: HeadingProps) => {
   const HeadingTag = `h${as || level}`;
@@ -28,8 +34,25 @@ const Heading = ({
   };
 
   return (
-    <div className={cn(defaultClassNames[level], className)} {...props}>
-      {children}
+    <div className="flex flex-col items-center gap-4 text-center max-w-3xl mx-auto">
+      {badge && (
+        <Animation className=" h-auto">
+          <Badge variant="outline">{badge}</Badge>
+        </Animation>
+      )}
+      <div className={cn(defaultClassNames[level], className)} {...props}>
+        <Animation delay={0.25} isHidden>
+          {children}
+        </Animation>
+      </div>
+
+      {description && (
+        <Animation className="min-h-fit" delay={0.5} isHidden>
+          <p className="text-muted-foreground lg:text-lg lg:pt-4">
+            {description}
+          </p>
+        </Animation>
+      )}
     </div>
   );
 };
