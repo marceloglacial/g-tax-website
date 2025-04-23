@@ -1,5 +1,8 @@
 # G Tax Website
 
+[![wakatime](https://wakatime.com/badge/user/cee0e641-3254-41c3-a42e-8f3adfdfbc22/project/c7a78e85-aab6-4d89-965e-e2bcce2a8232.svg)](https://wakatime.com/badge/user/cee0e641-3254-41c3-a42e-8f3adfdfbc22/project/c7a78e85-aab6-4d89-965e-e2bcce2a8232)
+
+
 ## Setup local development
 
 Follow these steps to set up the project:
