@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "G-Tax - Assessoria e consultoria fiscal para brasileiros no Canadá.",
+  title: "G-Tax - Assessoria e consultoria fiscal para brasileiros no Canada.",
   description:
     "Soluções completas e personalizadas para o preenchimento e a entrega de sua declaração de imposto de renda, com foco na segurança, agilidade e total conformidade com as normas fiscais canadenses.",
 };

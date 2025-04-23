@@ -22,12 +22,12 @@ const Faq = ({
   badge = "Esclarecemos suas Dúvidas",
   items = [
     {
-      question: "Quem precisa declarar o imposto de renda no Canadá?",
+      question: "Quem precisa declarar o imposto de renda no Canada?",
       answer:
-        "Todos os residentes fiscais do Canadá devem declarar sua renda, independentemente de onde ela é gerada. Se você for residente, precisará declarar seus rendimentos globais.",
+        "Todos os residentes fiscais do Canada devem declarar sua renda, independentemente de onde ela é gerada. Se você for residente, precisará declarar seus rendimentos globais.",
     },
     {
-      question: "Qual é o prazo para declarar o imposto de renda no Canadá?",
+      question: "Qual é o prazo para declarar o imposto de renda no Canada?",
       answer:
         "A data limite para enviar a declaração de imposto de renda é 30 de abril do ano seguinte ao ano fiscal (que vai de 1º de janeiro a 31 de dezembro).  Se você for autônomo (trabalhador independente), o prazo é estendido até 15 de junho, mas qualquer saldo devido precisa ser pago até 30 de abril.",
     },
@@ -38,9 +38,9 @@ const Faq = ({
         "Os principais documentos incluem o T4 (informações sobre os rendimentos de emprego), T5 (renda de investimentos), e outros formulários específicos dependendo da sua situação fiscal (como T3 para fundos de investimento, ou T2202 para estudantes).",
     },
     {
-      question: "Quais são as faixas de imposto de renda no Canadá?",
+      question: "Quais são as faixas de imposto de renda no Canada?",
       answer:
-        "O Canadá tem um sistema de imposto progressivo, com faixas de imposto que variam conforme o nível de renda. Os impostos são cobrados tanto pelo governo federal quanto pelos governos provinciais e territoriais.",
+        "O Canada tem um sistema de imposto progressivo, com faixas de imposto que variam conforme o nível de renda. Os impostos são cobrados tanto pelo governo federal quanto pelos governos provinciais e territoriais.",
     },
     {
       question: "É possível deduzir despesas ao declarar o imposto de renda?",
@@ -48,7 +48,7 @@ const Faq = ({
         "Sim, várias despesas podem ser deduzidas, como despesas com cuidados infantis, despesas de trabalho (no caso de trabalhadores autônomos), contribuições para o RRSP (Plano de Poupança para Aposentadoria Registrado), entre outras.",
     },
     {
-      question: `Como funciona o "RRSP" no Canadá?`,
+      question: `Como funciona o "RRSP" no Canada?`,
       answer:
         "O RRSP (Registered Retirement Savings Plan) é uma conta de poupança que permite que os canadenses contribuam para sua aposentadoria de forma tributária vantajosa. As contribuições ao RRSP são dedutíveis, reduzindo a quantidade de imposto a ser paga no ano em que foram feitas.",
     },
@@ -65,7 +65,7 @@ const Faq = ({
     {
       question: `O que é o "GST/HST Credit"?`,
       answer:
-        "O GST/HST Credit é um benefício pago a pessoas de baixa a moderada renda para compensar parte do custo do GST (Imposto sobre Bens e Serviços) ou HST (Harmonized Sales Tax) que pagam sobre bens e serviços no Canadá.",
+        "O GST/HST Credit é um benefício pago a pessoas de baixa a moderada renda para compensar parte do custo do GST (Imposto sobre Bens e Serviços) ou HST (Harmonized Sales Tax) que pagam sobre bens e serviços no Canada.",
     },
     {
       question: "Posso receber um reembolso?",
@@ -86,7 +86,7 @@ const Faq = ({
           level={1}
           badge={badge}
           description="Respostas para as perguntas mais comuns sobre o
-          imposto de renda no Canadá. Nosso objetivo é esclarecer suas dúvidas e
+          imposto de renda no Canada. Nosso objetivo é esclarecer suas dúvidas e
           ajudá-lo a entender melhor suas obrigações fiscais.
 "
         >
