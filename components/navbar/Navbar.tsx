@@ -178,7 +178,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
 
   return (
     <a key={item.title} href={item.url} className="text-md font-semibold">
-      {item.title}
+      <SheetTrigger>{item.title}</SheetTrigger>
     </a>
   );
 };
