@@ -1,80 +1,77 @@
-import { Badge } from "@/components/ui/badge";
+import { ReactNode } from "react";
+import { FileInput, FileKey2, FileOutput, FileUser } from "lucide-react";
 import Heading from "@/components/ui/heading";
+import Animation from "@/components/animation/Animation";
 
-interface Feature {
+interface Document {
   id: string;
   title: string;
-  subtitle: string;
-  description: string;
-  image: string;
+  url: string;
+  icon: ReactNode;
 }
 
 interface DocumentsProps {
   heading?: string;
-  features?: Feature[];
+  documents?: Document[];
   badge?: string;
   description?: string;
 }
 
 const Documents = ({
-  heading = "A better way to build websites",
-  badge = "Our documents",
-  description = "Desciption",
-  features = [
+  badge = "Documentos",
+  description = "Guias e outros documentos essenciais para a sua contabilidade. Mantenha suas obrigações em dia com facilidade e segurança.",
+  documents = [
     {
-      id: "feature-1",
-      title: "Built for artists and designers",
-      subtitle: "FOR DESIGNERS",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima doloribus illum, labore quis facilis molestias!",
-      image: "https://shadcnblocks.com/images/block/placeholder-1.svg",
+      id: "1",
+      title: "Income Tax Organizer",
+      url: "GTAX-Income-Tax-Organizer.pdf",
+      icon: <FileInput className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     {
-      id: "feature-2",
-      title: "Built for coders and developers",
-      subtitle: "FOR DEVELOPERS",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima doloribus illum, labore quis facilis molestias!",
-      image: "https://shadcnblocks.com/images/block/placeholder-4.svg",
+      id: "2",
+      title: "Self-Employed Guide",
+      url: "GTAX-Are-you-Self-Employed.pdf",
+      icon: <FileUser className="w-6 h-6 lg:w-8 lg:h-8" />,
+    },
+    {
+      id: "3",
+      title: "Self Employed (Only Rental Property) Guide",
+      url: "GTAX-Self-Employed-Only-Rental-Property.pdf",
+      icon: <FileKey2 className="w-6 h-6 lg:w-8 lg:h-8" />,
+    },
+    {
+      id: "4",
+      title: "T1135 Foreign Income Verification Statement",
+      url: "GTAX-T1135-Foreign-Income-Verification-Statement.pdf",
+      icon: <FileOutput className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
   ],
 }: DocumentsProps) => {
   return (
-    <section id="documentos" className="py-32">
+    <section id="documentos" className="max-w-7xl mx-auto pt-24 lg:pt-48">
       <Heading
         level={1}
         className="max-w-2xl text-center"
         badge={badge}
         description={description}
       >
-        {heading}
+        Baixe Seus <span className="text-accent">Documentos</span> Fiscais e
+        Contábeis
       </Heading>
       <div className="container max-w-7xl">
-        <div className="mt-20 grid gap-9 lg:grid-cols-2">
-          {features.map((feature) => (
-            <div
-              key={feature.id}
-              className="flex flex-col justify-between rounded-lg bg-accent"
-            >
-              <div className="flex justify-between gap-10 border-b">
-                <div className="flex flex-col justify-between gap-14 py-6 pl-4 md:py-10 md:pl-8 lg:justify-normal">
-                  <p className="text-xs text-muted-foreground">
-                    {feature.subtitle}
-                  </p>
-                  <h3 className="text-2xl md:text-4xl">{feature.title}</h3>
+        <div className="mt-10 lg:mt-20 grid lg:gap-9 lg:grid-cols-2">
+          {documents.map((document, index) => (
+            <a href={document.url} key={index} download>
+              <Animation
+                delay={(index + 2) / 3}
+                className="flex border-b items-center"
+              >
+                <div className="text-accent">{document.icon}</div>
+                <div className="py-4 pl-4 lg:py-10 lg:pl-8">
+                  <h3 className="xl:text-2xl">{document.title}</h3>
                 </div>
-                <div className="md:1/3 w-2/5 shrink-0 rounded-r-lg border-l">
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="p-4 text-muted-foreground md:p-8">
-                {feature.description}
-              </div>
-            </div>
+              </Animation>
+            </a>
           ))}
         </div>
       </div>

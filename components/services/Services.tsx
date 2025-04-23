@@ -1,4 +1,5 @@
 import Heading from "@/components/ui/heading";
+import Animation from "@/components/animation/Animation";
 
 interface ServicesProps {
   badge?: string;
@@ -20,106 +21,111 @@ interface ServicesProps {
       description: string;
       image: string;
     };
-    feature4: {
-      title: string;
-      description: string;
-      image: string;
-    };
   };
 }
 
 const Services = ({
   badge = "Nossos Serviços",
-  heading = "A Collection of Components Built With Shadcn & Tailwind",
   description = "Sabemos o quanto é importante garantir que suas obrigações fiscais estejam em dia, e é por isso que estamos aqui para simplificar esse processo para você. Se você é residente no Canadá e precisa de ajuda para lidar com questões fiscais, nossa equipe está pronta para oferecer o suporte necessário, com atendimento dedicado e eficiente.",
   features = {
     feature1: {
-      title: "UI/UX Design",
+      title: "Imposto de renda pessoa física",
       description:
-        "Creating intuitive user experiences with modern interface design principles and user-centered methodologies.",
-      image: "https://shadcnblocks.com/images/block/placeholder-1.svg",
+        "Assessoria para declaração no Canadá, com precisão e conformidade.",
+      image: "imposto.png",
     },
     feature2: {
-      title: "Responsive Development",
+      title: "Abertura de Empresa",
       description:
-        "Building websites that look and function perfectly across all devices and screen sizes.",
-      image: "https://shadcnblocks.com/images/block/placeholder-2.svg",
+        "Suporte completo para abrir sua empresa no Canadá, de forma segura e eficiente.",
+      image: "abertura.png",
     },
     feature3: {
-      title: "Brand Integration",
+      title: "Serviços Contábeis",
       description:
-        "Seamlessly incorporating your brand identity into every aspect of your website's design.",
-      image: "https://shadcnblocks.com/images/block/placeholder-1.svg",
-    },
-    feature4: {
-      title: "Performance Optimization",
-      description:
-        "Ensuring fast loading times and smooth performance through optimized code and assets.",
-      image: "https://shadcnblocks.com/images/block/placeholder-2.svg",
+        "Serviços contábeis confiáveis e precisos para você ou sua empresa no Canadá.",
+      image: "servicos.png",
     },
   },
 }: ServicesProps) => {
   return (
-    <section id="servicos" className="py-32 grid gap-16">
+    <section
+      id="servicos"
+      className="max-w-7xl mx-auto grid gap-16 pt-24 xl:pt-48"
+    >
       <Heading
         level={1}
         className="max-w-2xl text-center"
         badge={badge}
         description={description}
       >
-        {heading}
+        Maximize seus <span className="text-accent">retornos</span>, minimize
+        seu estresse.
       </Heading>
-      <div className="relative flex justify-center">
-        <div className="border-muted2 relative flex w-full flex-col border md:w-1/2 lg:w-full">
-          <div className="relative flex flex-col lg:flex-row">
-            <div className="border-muted2 flex flex-col justify-between border-b border-solid p-10 lg:w-3/5 lg:border-r lg:border-b-0">
-              <Heading level={3}>{features.feature1.title}</Heading>
-              <p className="text-muted-foreground">
+
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="grid gap-8">
+          <Animation
+            delay={0.5}
+            className="bg-foreground rounded-xl lg:rounded-4xl shadow-md p-4 lg:p-6 grid sm:grid-cols-2 gap-6 items-center"
+          >
+            <div>
+              <h3 className="text-secondary text-2xl lg:text-3xl font-semibold">
+                {features.feature1.title}
+              </h3>
+              <p className="text-muted-foreground lg:text-lg">
                 {features.feature1.description}
               </p>
+            </div>
+            <div>
               <img
                 src={features.feature1.image}
                 alt={features.feature1.title}
-                className="mt-8 aspect-[1.5] h-full w-full object-cover lg:aspect-[2.4]"
+                className="rounded-xl lg:rounded-3xl object-cover aspect-video lg:aspect-auto h-full w-full"
               />
             </div>
-            <div className="flex flex-col justify-between p-10 lg:w-2/5">
-              <Heading level={3}>{features.feature2.title}</Heading>
-              <p className="text-muted-foreground">
+          </Animation>
+          <Animation
+            delay={0.5}
+            className="bg-foreground rounded-xl lg:rounded-4xl shadow-md p-4 lg:p-6 grid sm:grid-cols-2 gap-6 items-center"
+          >
+            <div>
+              <h3 className="text-secondary text-2xl lg:text-3xl font-semibold">
+                {features.feature2.title}
+              </h3>
+              <p className="text-muted-foreground lg:text-lg">
                 {features.feature2.description}
               </p>
+            </div>
+            <div>
               <img
                 src={features.feature2.image}
                 alt={features.feature2.title}
-                className="mt-8 aspect-[1.45] h-full w-full object-cover"
+                className="rounded-xl lg:rounded-3xl object-cover aspect-video lg:aspect-auto h-full w-full"
               />
             </div>
-          </div>
-          <div className="border-muted2 relative flex flex-col border-t border-solid lg:flex-row">
-            <div className="border-muted2 flex flex-col justify-between border-b border-solid p-10 lg:w-2/5 lg:border-r lg:border-b-0">
-              <Heading level={3}>{features.feature3.title}</Heading>
-              <p className="text-muted-foreground">
-                {features.feature3.description}
-              </p>
-              <img
-                src={features.feature3.image}
-                alt={features.feature3.title}
-                className="mt-8 aspect-[1.45] h-full w-full object-cover"
-              />
-            </div>
-            <div className="flex flex-col justify-between p-10 lg:w-3/5">
-              <Heading level={3}>{features.feature4.title}</Heading>
-              <p className="text-muted-foreground">
-                {features.feature4.description}
-              </p>
-              <img
-                src={features.feature4.image}
-                alt={features.feature4.title}
-                className="mt-8 aspect-[1.5] h-full w-full object-cover lg:aspect-[2.4]"
-              />
-            </div>
-          </div>
+          </Animation>
         </div>
+        <Animation
+          delay={0.7}
+          className="h-full bg-foreground rounded-2xl lg:rounded-3xl shadow-md p-4 lg:p-6 flex flex-col-reverse sm:flex-row-reverse lg:flex-col gap-6"
+        >
+          <div className="sm:w-1/2 lg:w-full">
+            <img
+              src={features.feature3.image}
+              alt={features.feature3.title}
+              className="rounded-xl lg:rounded-3xl object-cover aspect-video lg:aspect-auto object-top w-full lg:h-[500px]"
+            />
+          </div>
+          <div className="flex flex-col justify-center h-full sm:w-1/2 lg:w-full">
+            <h3 className="text-secondary text-2xl lg:text-3xl font-semibold">
+              {features.feature3.title}
+            </h3>
+            <p className="text-muted-foreground lg:text-lg">
+              {features.feature3.description}
+            </p>
+          </div>
+        </Animation>
       </div>
     </section>
   );

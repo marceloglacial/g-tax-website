@@ -1,93 +1,73 @@
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
+import { Building, Phone } from "lucide-react";
 import Heading from "@/components/ui/heading";
+import Animation from "@/components/animation/Animation";
+import { Separator } from "../ui/separator";
 
-interface LoginProps {
-  heading?: string;
-  subheading?: string;
-  logo?: {
-    url: string;
-    src: string;
-    alt: string;
-  };
-  loginText?: string;
-  signupText?: string;
-  signupUrl?: string;
-}
-
-const Contact = ({
-  heading = "Login",
-  subheading = "Welcome back",
-  logo = {
-    url: "https://www.shadcnblocks.com",
-    src: "https://shadcnblocks.com/images/block/logos/shadcnblockscom-icon.svg",
-    alt: "Shadcnblocks",
-  },
-  loginText = "Log in",
-  signupText = "Don't have an account?",
-  signupUrl = "#",
-}: LoginProps) => {
+const Contact = () => {
   return (
-    <section id="contato" className="py-32">
-      <div className="container">
-        <Heading
-          level={1}
-          badge="Contate-nos"
-          description="Tem dúvidas ou só quer dar um oi? Envie-nos uma mensagem abaixo."
-        >
-          Fale Conosco
-        </Heading>
-        <div className="grid grid-cols-2 gap-16">
-          <div>Contact</div>
-          <div className="mx-auto w-full max-w-sm rounded-md p-6 shadow">
-            <div className="mb-6 flex flex-col items-center">
-              <a href={logo.url} className="mb-6 flex items-center gap-2">
-                <img src={logo.src} className="max-h-8" alt={logo.alt} />
-              </a>
-              <h1 className="mb-2 text-2xl font-bold">{heading}</h1>
-              <p className="text-muted-foreground">{subheading}</p>
+    <section
+      id="contato"
+      className="max-w-7xl mx-auto grid gap-8 lg:gap-0 pt-24 lg:pt-48"
+    >
+      <Heading
+        level={1}
+        badge="Contate-nos"
+        description="Tem dúvidas ou só quer dar um oi? Estamos aqui para ajudar! Preencha o formulário abaixo e entraremos em contato com você o mais breve possível."
+      >
+        <span className="text-accent">Fale</span> Conosco
+      </Heading>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full mx-auto md:py-20">
+        <div className="grid gap-8 lg:gap-0">
+          <Animation delay={0.6} className="hidden lg:text-xl">
+            Descubra como podemos ajudá-lo a manter sua vida financeira em ordem
+            enquanto você aproveita as oportunidades que o Canadá oferece!
+          </Animation>
+          <Animation delay={0.7} className="flex flex-col gap-2 xl:text-xl">
+            <div className="flex gap-2 items-center">
+              <Building className=" text-accent" />
+              <span className="font-semibold">Our Team</span>
             </div>
             <div>
-              <div className="grid gap-4">
-                <Input type="email" placeholder="Enter your email" required />
-                <div>
-                  <Input
-                    type="password"
-                    placeholder="Enter your password"
-                    required
-                  />
-                </div>
-                <div className="flex justify-between">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox
-                      id="remember"
-                      className="border-muted-foreground"
-                    />
-                    <label
-                      htmlFor="remember"
-                      className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Remember me
-                    </label>
-                  </div>
-                  <a href="#" className="text-sm text-primary hover:underline">
-                    Forgot password
-                  </a>
-                </div>
-                <Button type="submit" className="mt-2 w-full">
-                  {loginText}
-                </Button>
-              </div>
-              <div className="mx-auto mt-8 flex justify-center gap-1 text-sm text-muted-foreground">
-                <p>{signupText}</p>
-                <a href={signupUrl} className="font-medium text-primary">
-                  Sign up
-                </a>
-              </div>
+              <h3 className="font-semibold">Gabriela Asfora</h3>
+              <p className="text-sm">Chief Financial Officer</p>
             </div>
-          </div>
+          </Animation>
+          <Separator />
+          <Animation delay={0.8} className="flex flex-col gap-2 xl:text-xl">
+            <div className="flex gap-2 items-center">
+              <Phone className=" text-accent" />
+              <span className="font-semibold">Telefone</span>
+            </div>
+            <div>
+              <h3 className="xl:text-sm hover:text-accent">
+                <a href="tel:+16138895894">(613) 889.5894</a>
+              </h3>
+            </div>
+          </Animation>
+          <Separator />
+          <Animation delay={0.9} className="flex flex-col gap-2 xl:text-xl">
+            <div className="flex gap-2 items-center">
+              <Building className=" text-accent" />
+              <span className="font-semibold">E-mail</span>
+            </div>
+            <div>
+              <h3 className="xl:text-sm hover:text-accent">
+                <a href="mailto:gtax.ca@hotmail.com">gtax.ca@hotmail.com</a>
+              </h3>
+            </div>
+          </Animation>
         </div>
+        <Animation
+          delay={0.7}
+          className="bg-white/10 backdrop-blur-md rounded-4xl p-2 border border-white/10 shadow-2xl overflow-hidden"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d359536.97780813486!2d-76.12988290337805!3d45.25016593749807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05b25f5113af%3A0x8a6a51e131dd15ed!2sOttawa%2C%20ON!5e0!3m2!1sen!2sca!4v1745372687688!5m2!1sen!2sca"
+            width="100%"
+            loading="lazy"
+            className="rounded-3xl h-72 lg:h-[500px]"
+          ></iframe>
+        </Animation>
       </div>
     </section>
   );
