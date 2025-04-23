@@ -26,7 +26,6 @@ interface ServicesProps {
 
 const Services = ({
   badge = "Nossos Serviços",
-  heading,
   description = "Sabemos o quanto é importante garantir que suas obrigações fiscais estejam em dia, e é por isso que estamos aqui para simplificar esse processo para você. Se você é residente no Canadá e precisa de ajuda para lidar com questões fiscais, nossa equipe está pronta para oferecer o suporte necessário, com atendimento dedicado e eficiente.",
   features = {
     feature1: {
@@ -50,7 +49,10 @@ const Services = ({
   },
 }: ServicesProps) => {
   return (
-    <section id="servicos" className="grid gap-16 pt-48">
+    <section
+      id="servicos"
+      className="max-w-7xl mx-auto grid gap-16 pt-24 xl:pt-48"
+    >
       <Heading
         level={1}
         className="max-w-2xl text-center"
@@ -106,17 +108,17 @@ const Services = ({
         </div>
         <Animation
           delay={0.7}
-          className="h-full bg-foreground rounded-2xl lg:rounded-3xl shadow-md p-4 lg:p-6 flex flex-col-reverse lg:flex-col gap-6"
+          className="h-full bg-foreground rounded-2xl lg:rounded-3xl shadow-md p-4 lg:p-6 flex flex-col-reverse sm:flex-row-reverse lg:flex-col gap-6"
         >
-          <div>
+          <div className="sm:w-1/2 lg:w-full">
             <img
               src={features.feature3.image}
               alt={features.feature3.title}
-              className="rounded-xl lg:rounded-3xl object-cover aspect-video lg:aspect-auto object-top w-full lg:h-[450px]"
+              className="rounded-xl lg:rounded-3xl object-cover aspect-video lg:aspect-auto object-top w-full lg:h-[500px]"
             />
           </div>
-          <div className="flex flex-col justify-center h-full">
-            <h3 className="text-secondary text-2xl lg:text-3xl font-semibold sm:w-1/2">
+          <div className="flex flex-col justify-center h-full sm:w-1/2 lg:w-full">
+            <h3 className="text-secondary text-2xl lg:text-3xl font-semibold">
               {features.feature3.title}
             </h3>
             <p className="text-muted-foreground lg:text-lg">

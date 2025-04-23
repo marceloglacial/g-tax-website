@@ -25,30 +25,30 @@ const Documents = ({
       id: "1",
       title: "Income Tax Organizer",
       url: "#",
-      icon: <FileInput className="w-6 h-6 lg:w-10 lg:h-10" />,
+      icon: <FileInput className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     {
       id: "2",
       title: "Self-Employed Guide",
       url: "#",
-      icon: <FileUser className="w-6 h-6 lg:w-10 lg:h-10" />,
+      icon: <FileUser className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     {
       id: "3",
       title: "Self Employed (Only Rental Property) Guide",
       url: "#",
-      icon: <FileKey2 className="w-6 h-6 lg:w-10 lg:h-10" />,
+      icon: <FileKey2 className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     {
       id: "4",
       title: "T1135 Foreign Income Verification Statement",
       url: "#",
-      icon: <FileOutput className="w-6 h-6 lg:w-10 lg:h-10" />,
+      icon: <FileOutput className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
   ],
 }: DocumentsProps) => {
   return (
-    <section id="documentos" className="pt-24 lg:pt-48">
+    <section id="documentos" className="max-w-7xl mx-auto pt-24 lg:pt-48">
       <Heading
         level={1}
         className="max-w-2xl text-center"
@@ -68,7 +68,7 @@ const Documents = ({
               >
                 <div className="text-accent">{document.icon}</div>
                 <div className="py-4 pl-4 lg:py-10 lg:pl-8">
-                  <h3 className="md:text-4xl">{document.title}</h3>
+                  <h3 className="xl:text-2xl">{document.title}</h3>
                 </div>
               </Animation>
             </a>

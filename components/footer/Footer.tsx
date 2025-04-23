@@ -3,8 +3,8 @@ import Logo from "@/components/logo/Logo";
 
 const Footer = () => {
   return (
-    <section id="footer" className="py-8">
-      <Animation className="container">
+    <section id="footer" className="max-w-7xl mx-auto py-8">
+      <Animation>
         <footer className="flex flex-col justify-between gap-4 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
           <Logo size="sm" />
           <p>
@@ -15,8 +15,7 @@ const Footer = () => {
               target="_blank"
             >
               marcelo glacial
-            </a>{" "}
-            - © {new Date().getFullYear()}
+            </a>
           </p>
         </footer>
       </Animation>

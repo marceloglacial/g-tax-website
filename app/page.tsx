@@ -8,7 +8,7 @@ import { Services } from "@/components/services/Services";
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto py-4 px-8">
+    <div className="py-4 px-8">
       <Navbar />
       <Hero />
       <Services />

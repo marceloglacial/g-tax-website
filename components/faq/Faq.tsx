@@ -80,7 +80,7 @@ const Faq = ({
   ],
 }: FaqProps) => {
   return (
-    <section id="faq" className="pt-24 lg:pt-48">
+    <section id="faq" className="max-w-7xl mx-auto pt-24 lg:pt-48">
       <div className="container lg:max-w-3xl lg:mx-auto grid gap-16">
         <Heading
           level={1}
@@ -96,10 +96,10 @@ const Faq = ({
           <Accordion type="single" collapsible>
             {items.map((item, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger className="font-normal hover:no-underline lg:text-2xl lg:py-8 cursor-pointer">
+                <AccordionTrigger className="font-normal hover:no-underline xl:text-xl lg:py-8 cursor-pointer">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-accent lg:text-lg">
+                <AccordionContent className="text-accent xl:text-lg">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
