@@ -1,5 +1,5 @@
 import Heading from "@/components/ui/heading";
-import { Animation } from "../animation/Animation";
+import Animation from "@/components/animation/Animation";
 
 interface ServicesProps {
   badge?: string;

@@ -1,4 +1,4 @@
-import { Animation } from "@/components/animation/Animation";
+import Animation from "@/components/animation/Animation";
 
 interface HeroProps {
   heading?: string;

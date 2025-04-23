@@ -1,7 +1,7 @@
-import Heading from "@/components/ui/heading";
-import { FileInput, FileKey2, FileOutput, FileUser } from "lucide-react";
 import { ReactNode } from "react";
-import { Animation } from "../animation/Animation";
+import { FileInput, FileKey2, FileOutput, FileUser } from "lucide-react";
+import Heading from "@/components/ui/heading";
+import Animation from "@/components/animation/Animation";
 
 interface Document {
   id: string;

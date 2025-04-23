@@ -8,7 +8,7 @@ interface AnimationProps extends PropsWithChildren {
   className?: string;
 }
 
-export const Animation = (props: AnimationProps) => {
+const Animation = (props: AnimationProps) => {
   return (
     <div className={`${props.isHidden ? "overflow-hidden relative" : ""}`}>
       <motion.div
@@ -30,3 +30,5 @@ export const Animation = (props: AnimationProps) => {
     </div>
   );
 };
+
+export default Animation;

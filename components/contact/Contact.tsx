@@ -1,10 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import Heading from "@/components/ui/heading";
 import { Building, Phone } from "lucide-react";
-import { Animation } from "../animation/Animation";
-import { Textarea } from "../ui/textarea";
+import Heading from "@/components/ui/heading";
+import Animation from "@/components/animation/Animation";
 
 const Contact = () => {
   return (

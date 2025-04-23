@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
-import { Animation } from "@/components/animation/Animation";
+import Animation from "@/components/animation/Animation";
 
 interface HeadingProps extends PropsWithChildren {
   level?: 1 | 2 | 3 | 4 | 5 | 6;

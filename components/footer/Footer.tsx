@@ -1,5 +1,5 @@
-import { Animation } from "../animation/Animation";
-import Logo from "../logo/Logo";
+import Animation from "@/components/animation/Animation";
+import Logo from "@/components/logo/Logo";
 
 const Footer = () => {
   return (

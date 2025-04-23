@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Heading from "../ui/heading";
+import Heading from "@/components/ui/heading";
 
 interface FaqItem {
   question: string;
