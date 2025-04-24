@@ -12,10 +12,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+const sharedMetadata = {
   title: "G-Tax - Assessoria e consultoria fiscal para brasileiros no Canada.",
   description:
     "Soluções completas e personalizadas para o preenchimento e a entrega de sua declaração de imposto de renda, com foco na segurança, agilidade e total conformidade com as normas fiscais canadenses.",
+  images: ["/apple.png"],
+};
+
+export const metadata: Metadata = {
+  ...sharedMetadata,
+  openGraph: {
+    ...sharedMetadata,
+  },
+  twitter: {
+    card: "summary_large_image",
+    ...sharedMetadata,
+  },
 };
 
 export default function RootLayout({
