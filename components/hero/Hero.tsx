@@ -24,10 +24,10 @@ const Hero = ({
   heading = "Assessoria e consultoria fiscal",
   subheading = " para brasileiros no Canada.",
   description = "Nossa missão é oferecer soluções completas e personalizadas para o preenchimento e a entrega de sua declaração de imposto de renda, com foco na segurança, agilidade e total conformidade com as normas fiscais canadenses.",
-  image = {
-    src: "/app.png",
-    alt: "Placeholder",
-  },
+  // image = {
+  //   src: "/app.png",
+  //   alt: "Placeholder",
+  // },
 }: HeroProps) => {
   return (
     <section
