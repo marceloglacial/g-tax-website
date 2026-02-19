@@ -24,13 +24,13 @@ const Documents = ({
     {
       id: "1",
       title: "Income Tax Organizer",
-      url: "/2025/GTAX_2025_Income_Tax_Organizer",
+      url: "/2025/GTAX_2025_Income_Tax_Organizer.pdf",
       icon: <FileInput className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     {
       id: "2",
       title: "Self-Employed Guide",
-      url: "/2025/GTAX_2025_Income_Tax_Organizer_Self_Employed",
+      url: "/2025/GTAX_2025_Income_Tax_Organizer_Self_Employed.pdf",
       icon: <FileUser className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     // {
