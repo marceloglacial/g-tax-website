@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { FileInput, FileKey2, FileOutput, FileUser } from "lucide-react";
+import { FileInput, FileUser } from "lucide-react";
 import Heading from "@/components/ui/heading";
 import Animation from "@/components/animation/Animation";
 
@@ -24,27 +24,27 @@ const Documents = ({
     {
       id: "1",
       title: "Income Tax Organizer",
-      url: "/GTAX-Income-Tax-Organizer.pdf",
+      url: "/2025/GTAX_2025_Income_Tax_Organizer",
       icon: <FileInput className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     {
       id: "2",
       title: "Self-Employed Guide",
-      url: "/GTAX-Are-you-Self-Employed.pdf",
+      url: "/2025/GTAX_2025_Income_Tax_Organizer_Self_Employed",
       icon: <FileUser className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
-    {
-      id: "3",
-      title: "Self Employed (Only Rental Property) Guide",
-      url: "/GTAX-Self-Employed-Only-Rental-Property.pdf",
-      icon: <FileKey2 className="w-6 h-6 lg:w-8 lg:h-8" />,
-    },
-    {
-      id: "4",
-      title: "T1135 Foreign Income Verification Statement",
-      url: "/GTAX-T1135-Foreign-Income-Verification-Statement.pdf",
-      icon: <FileOutput className="w-6 h-6 lg:w-8 lg:h-8" />,
-    },
+    // {
+    //   id: "3",
+    //   title: "Self Employed (Only Rental Property) Guide",
+    //   url: "/GTAX-Self-Employed-Only-Rental-Property.pdf",
+    //   icon: <FileKey2 className="w-6 h-6 lg:w-8 lg:h-8" />,
+    // },
+    // {
+    //   id: "4",
+    //   title: "T1135 Foreign Income Verification Statement",
+    //   url: "/GTAX-T1135-Foreign-Income-Verification-Statement.pdf",
+    //   icon: <FileOutput className="w-6 h-6 lg:w-8 lg:h-8" />,
+    // },
   ],
 }: DocumentsProps) => {
   return (
@@ -58,8 +58,8 @@ const Documents = ({
         Baixe Seus <span className="text-accent">Documentos</span> Fiscais e
         Contábeis
       </Heading>
-      <div className="container max-w-7xl">
-        <div className="mt-10 lg:mt-20 grid lg:gap-9 lg:grid-cols-2">
+      <div className="container max-w-xl mx-auto">
+        <div className="mt-10 lg:mt-20 grid lg:gap-4">
           {documents.map((document, index) => (
             <a href={document.url} key={index} download>
               <Animation
