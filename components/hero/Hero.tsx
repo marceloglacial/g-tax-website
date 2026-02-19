@@ -54,12 +54,12 @@ const Hero = ({
           </Animation>
         </div>
         <div className="lg:w-1/3  hidden lg:flex">
-          <Animation
+          {/* <Animation
             delay={0.5}
             className="bg-white/10 backdrop-blur-md rounded-4xl p-2 border border-white/10 shadow-2xl overflow-hidden"
           >
             <img src={image.src} alt={image.alt} className="w-full h-full" />
-          </Animation>
+          </Animation> */}
         </div>
       </div>
     </section>

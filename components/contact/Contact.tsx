@@ -25,7 +25,7 @@ const Contact = () => {
           <Animation delay={0.7} className="flex flex-col gap-2 xl:text-xl">
             <div className="flex gap-2 items-center">
               <Building className=" text-accent" />
-              <span className="font-semibold">Our Team</span>
+              <span className="font-semibold">Nosso Time</span>
             </div>
             <div>
               <h3 className="font-semibold">Gabriela Asfora</h3>
